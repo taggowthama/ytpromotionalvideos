@@ -1,5 +1,6 @@
 const path = require('path')
 const APP_DIR = path.resolve(__dirname, "./src");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 console.log(APP_DIR )
 module.exports={
     
@@ -7,7 +8,8 @@ module.exports={
     mode:"development",
     output:{
         
-        path: path.resolve(__dirname,'dist'),
+        path: path.resolve(__dirname,'build'),
+        publicPath: '/',
         filename: 'bundle.js'
     },
     module:{
@@ -26,9 +28,14 @@ module.exports={
               }
         ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+          template: path.resolve('./public/index.html'),
+        }),
+      ],
     devServer:{
         port: 3000,
-        contentBase: './public',
+        contentBase: './build',
         inline:true
     }
 }
