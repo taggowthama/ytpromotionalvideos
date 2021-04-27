@@ -1,0 +1,19 @@
+
+.tube__embed{
+    display: flex;
+   
+    width: 400px;
+    flex-direction: column;
+    margin-left: 30%;
+}
+
+  .tube__video-responsive iframe{
+      height: 350px;
+      width: 400px;
+  }
+
+  .tube__appleimg{
+      height: 100px;
+      width: 200px;
+      margin-left: -15px;
+  }
