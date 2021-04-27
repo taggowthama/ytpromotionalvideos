@@ -1,19 +1,63 @@
+.tube_ytheader{
+    font-weight: 400;
+    font-size: 20px;
+}
 
 .tube__embed{
     display: flex;
-   
-    width: 400px;
+    height: 250px;
+    width: 100%;
     flex-direction: column;
-    margin-left: 30%;
+    
+    position: relative;
+    
 }
 
   .tube__video-responsive iframe{
-      height: 350px;
-      width: 400px;
+    height: 250px;
+    width: 100%;
+    position: relative;
   }
 
   .tube__appleimg{
+      padding-top: 10px;
       height: 100px;
       width: 200px;
       margin-left: -15px;
+  }
+
+  @media only screen and (min-width: 600px) {
+     
+    .tube_ytheader{
+        font-weight: 400;
+        font-size: 25px;
+        margin-left: 7em;
+    }
+    .tube__embed{
+        display: flex;
+        height: 350px;
+        width: 100%;
+        flex-direction: column;
+        
+        position: relative;
+        
+    }
+    .tube__video-responsive { 
+        margin-left: 10em;
+        height: 500px;
+        width: 100%;
+        position: relative;
+      }
+      .tube__video-responsive iframe{
+        height: 350px;
+        width: 50%;
+        position: relative;
+      }
+      .tube__appleimg{
+          padding-top: 10px;
+        height: 70px;
+        width: 200px;
+        margin-left: 9em;
+    }
+      
   }
